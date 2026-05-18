@@ -5,16 +5,18 @@ public class BusquedaBinaria {
         for ( int i= 0; i < products.length-1; i ++){
             boolean swap = false ;
             for ( int  j = 0; j < products.length-1-i ; j++){
-                if ( products[j].getNombre().equals(products[j + 1].getNombre()));
+                if ( products[j].getNombre().compareTo(products[j + 1].getNombre())< 0){
+
                 Product aux = products[j];
                 products[j] = products[ j+1];
                 products[j + 1] = aux ;
                 swap= true ;
             
             }
-            if ( ! swap);
+        }
+            if ( ! swap){
             break ;
-        
+            }
         }
         
     }

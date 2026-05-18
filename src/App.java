@@ -11,8 +11,13 @@ public class App {
 
         };
         BusquedaBinaria bBinaria = new BusquedaBinaria();
+        bBinaria.sortByName(products);
+        // mostrar ordenado
+        for ( Product p : products){
+            System.out.println(p.getNombre());
+        }
         
-        int res = bBinaria.finByName( products, "Laptop ");
+        int res = bBinaria.finByName( products, "Laptop");
         if ( res >= 0){
             System.out.println("entre en pos ="+ res);
 
